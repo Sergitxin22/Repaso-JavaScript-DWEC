@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Actividad 3-1</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  </head>
+  <body>
+    <div class="jumbotron d-flex align-items-center min-vh-100">
+        <div class="container">
+          <div class='row'>
+            <div class='col-3' onk></div>
+            <div class='col-6 text-center' id="principal">
+                
+                    <div class="form-group">
+                      <label for="Usuario">Usuario:</label>
+                      <input type="text" class="form-control" id="usuario">
+                    </div>
+                    <div class="form-group">
+                      <label for="pwd">Contraseña:</label>
+                      <input type="password" class="form-control" id="pwd">
+                    </div>
+                    <div id="captcha">
+                    <div class="alert alert-info">
+                        <span id="op1"></span> <span id="oper"></span> <span id="op2"></span> = <input type="text" id="rdo">
+                        <a href="#" id='btn' class='btn btn-primary' onclick="comprobar();">Comprobar</a>
+                    </div>
+                    </div>
+                    <button type="submit" id='enviar' class="btn btn-primary" disabled onclick="validar(usuario.value, pwd.value); ">Submit</button>
+                
+            </div>    
+          </div>
+        </div>
+    </div>
+
+    <script src="./js/index.js"></script>
+  </body>
+</html>

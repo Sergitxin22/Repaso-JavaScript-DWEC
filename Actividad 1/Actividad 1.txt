@@ -1,0 +1,56 @@
+1.  Indicar el resultado de evaluar las siguientes expresiones :
+
+    1.  4 + 3 * "2" % 2                     -> 4
+    2.  12 + "2" + 2                        -> 1222
+    3.  12 + + "2" + 2                      -> 16
+    4.  12 + 2 + "2"                        -> "142"
+    5.  12 && true || undefined             -> true
+    6.  12 || true && undefined             -> 12
+    7.  "Hola" ** 2                         -> NaN
+    8.  ("")?"uno":""                       -> ""
+    9.  undefined >= null                   -> false
+    10. "12" == 12                          -> true
+    11. "12" === 12                         -> false
+    12. +"12" === 12                        -> true
+    13. !!"true" !== true                   -> false
+    14. 12>0 && null || "Hola" || undefined -> true
+    15. 12>0 || null && "Hola" && undefined -> true
+
+    Asumiendo que var1 vale 10 indicar cuál sería el valor final de var1 y el resultado devuelto (los dos casos son independientes):
+
+    1.  ++var1 ** 2     -> 121, 11
+    2.  var1++ + ++var1 -> 22, 12
+
+2.  Escribir las expresiones o instrucciones de asignación necesarias para obtener los siguientes resultados.    NOTA: los datos en negrita se asume que son variables YA DEFINIDAS y con distinto valor
+    Ejemplo: El importe con iva (18%) de una cantidad de productos vendidas a un precio dado
+    cantidad * precio * 1.18;
+
+    1.  El caso anterior pero aplicando un descuento
+        -> cantidad * precio * 1.18 - (descuento * precio / 100)
+
+    2.  La población es Bilbao o Madrid y el sueldo está entre 1000 y 1500 €
+        -> población === "Bilbao" | población == "Madrid" && sueldo >= 1000 && sueldo <= 1500
+
+    3.  Tras incrementar el contenido de contador en 1 y multiplicarlo por 10 el resultado es mayor que limite
+        -> ++contador * 10 > limite 
+
+    4.  La variable var1 no ha sido inicializada
+        -> var var1 = undefined
+
+    5.  Si metemos una cantidad de productos en cajas de 10 productos ¿cuántas cajas necesitamos? 
+        NOTA: Si sobran productos deben ir en una caja aparte (10 prod → 1 caja, 11 prod → 2 cajas)
+        -> var cajas = (productos%10==0) ? productos / 10 : Math.round(productos / 10) + 1
+
+    6.  Si un nombre contiene información, lo que contenga, si no (está sin definir, es nulo o contiene una cadena vacía) un valor false.
+        -> var cajas = (nombre) ? nombre : false
+
+    7.  Si un descuento es 0 el valor 5, si es distinto de 0 lo que haya en descuento (de dos formas distintas, es decir, con distinto tipo de operadores)
+        -> (descuento==0) ? 5 / 10 : descuento
+        ->  switch (descuento) {
+                case 0:
+                    return 5;
+                    break;
+                default:
+                    return descuento;
+                    break;
+            }

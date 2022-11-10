@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Actividad 14 - Dog API</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  </head>
+  <!-- Lo primero que se hace es cargarDatos -->
+  <body onload="cargarDatos()">
+    <div class="container m-4">
+        <div class="row">
+          <!-- Con el elemeto select se crea un combo de raza y un combo de subraza 
+          Cuando cambia el elemento raza se llama a seleccionar y cuando cambia subraza se llama a mostrarFotos-->
+            <select id="raza" class="select custom-select m-2" onchange="seleccionar(this)"></select>
+            <select id="subRaza" class="select custom-select m-2" onchange="mostrarFotos(this)"></select>
+        </div>
+        <div class="row">
+          <!-- En este div se mostrarán las fotos -->
+            <div class="card-columns" id="fotos">
+
+            </div>
+        </div>
+    </div>
+    <script src="./js/index.js"></script> 
+  </body>
+</html>

@@ -1,0 +1,15 @@
+.marcar {
+	background-color: green;
+}
+
+.eliminar {
+	background-color: red;
+}
+
+.completado {
+	text-decoration: line-through;
+}
+
+.margenes {
+	margin: 2em;
+}
